@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <h1>Apply for Job</h1>
+    <form action="/apply/<%= jobId %>" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" class="form-control rounded-pill" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" class="form-control rounded-pill" placeholder="Your registered email" required value="<%= locals.userEmail %>">
+        </div>
+        <div class="form-group">
+            <label for="contact">Your Contact Number</label>
+            <input type="text" id="contact" name="contact" class="form-control rounded-pill" placeholder="Your contact number" required>
+        </div>
+        <div class="form-group">
+            <label for="resume">Upload Resume</label>
+            <input type="file" id="resume" name="resume" class="form-control-file" required>
+        </div>
+        <button type="submit" class="btn btn-primary float-right rounded-pill">Submit Application</button>
+    </form>
+</div>

@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Register</div>
+                <div class="card-body">
+                    <!-- Registration Form -->
+                    <form action="/register" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control rounded-pill" id="name" name="name" placeholder="Your fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control rounded-pill" id="email" name="email" placeholder="Your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control rounded-pill" id="password" name="password" placeholder="Desired password" required>
+                        </div>
+                        <!-- Additional fields for job portal-specific registration -->
+                        <!-- Add necessary fields here -->
+
+                        <button type="submit" class="btn btn-primary float-right rounded-pill">Register</button>
+                    </form>
+                    <!-- End Registration Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

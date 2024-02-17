@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <h2 class="text-center">Job Listings</h2>
+  <% if (jobs.length > 0) { %>
+  <% jobs.forEach(job => { %>
+  <div class="card mb-3 flex">
+    <div class="card-body">
+      <h5 class="card-title"><%= job.title %></h5>
+      <p class="card-text">Category: <%= job.category %></p>
+      <p class="card-text">Company: <%= job.company %></p>
+      <p class="card-text">Location: <%= job.location %></p>
+      <p class="card-text">Package: <%= job.package %></p>
+      <p class="card-text">Posted On: <%= job.creationDate %></p>
+      <p class="card-text">Apply Within: <%= job.applyBy %></p>
+      <p class="card-text">Vacancy: <%= job.openings %></p>
+      <p class="card-text">Skills Required: <%= job.skillsRequired %></p>
+      <a href="/jobs/<%= job.id %>/applicants" class="btn btn-outline-success rounded-pill">
+        <p class="card-text">Applicants: <%= job.applicants.length %></p>
+      </a>
+      <a href="/jobs/<%= job.id %>" class="btn btn-primary float-right rounded-pill">View Details</a>
+    </div>
+  </div>
+  <% }) %>
+  <% } else { %>
+  <p>No job listings available.</p>
+  <% } %>
+  <br><br><br><br><br>
+</div>

@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <h1>Applicants for Job</h1>
+    <table class="applicants-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Resume</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if(applicants.length > 0){ %>
+                <% applicants.forEach(function(applicant) { %>
+                    <tr>
+                        <td><%= applicant.name %></td>
+                        <td><%= applicant.email %></td>
+                        <td><%= applicant.contact %></td>
+                        <td>
+                            <% if (applicant.resume) { %>
+                                <a href="<%= applicant.resume %>" class="btn btn-outline-primary rounded-pill">Download Resume</a>
+                            <% } else { %>
+                                No resume uploaded
+                            <% } %>
+                        </td>
+                    </tr>
+                <% }); %>
+            <% } %>
+        </tbody>
+    </table>
+    <br><br>
+    <a href="/jobs" class="btn btn-primary float-right rounded-pill">Back to Jobs</a>
+</div>

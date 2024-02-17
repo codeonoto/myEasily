@@ -1,0 +1,17 @@
+<main>
+    <h2>Latest Job Listings</h2>
+    <!-- Display the latest job listings here -->
+    <% if (jobs.length > 0) { %>
+        <ul>
+            <% jobs.forEach(job => { %>
+                <li>
+                    <h3><%= job.title %></h3>
+                    <p><%= job.description %></p>
+                    <!-- Add more details about the job listing -->
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No jobs available at the moment.</p>
+    <% } %>
+</main>

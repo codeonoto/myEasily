@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <h1>Create Job Posting</h1>
+    <form action="/jobs" method="POST">
+        <div class="form-group">
+            <label for="category">Job Category</label>
+            <input type="text" id="category" name="category" class="form-control rounded-pill" placeholder="Job category" required>
+        </div>
+        <div class="form-group">
+            <label for="title">Job Designation</label>
+            <input type="text" id="title" name="title" class="form-control rounded-pill" placeholder="Job title" required>
+        </div>
+        <div class="form-group">
+            <label for="jobLocation">Job Location</label>
+            <input type="text" id="location" name="location" class="form-control rounded-pill" placeholder="Job location" required>
+        </div>
+        <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <input type="text" id="company" name="company" class="form-control rounded-pill" placeholder="Company name" required>
+        </div>
+        <div class="form-group">
+            <label for="salary">Package</label>
+            <input type="text" id="package" name="package" class="form-control rounded-pill" placeholder="Package" required>
+        </div>
+        <div class="form-group">
+            <label for="creationDate">Created On</label>
+            <input type="date" id="creationDate" name="creationDate" class="form-control rounded-pill" placeholder="" required>
+        </div>
+        <div class="form-group">
+            <label for="applyBy">Apply By</label>
+            <input type="date" id="applyBy" name="applyBy" class="form-control rounded-pill" placeholder="Application deadline" required>
+        </div>
+        <div class="form-group">
+            <label for="skillsRequired">Skills Required</label>
+            <input type="text" id="skillsRequired" name="skillsRequired" class="form-control rounded-pill" placeholder="Speparate skills with space" required>
+        </div>
+        <div class="form-group">
+            <label for="NumberOfOpenings">Number of Openings</label>
+            <input type="number" id="openings" name="openings" class="form-control rounded-pill" placeholder="Openings" required>
+        </div>
+        <button type="submit" class="btn btn-primary float-right rounded-pill">Create Job Posting</button>
+    </form>
+    <br><br><br><br><br><br><br><br>
+</div>
